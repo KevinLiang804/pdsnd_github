@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
-
+"Dictionary with csv and city"
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -39,7 +39,7 @@ def get_filters():
         if day not in days:
             print('Input not valid')
 
-    print('-'*40)
+    print('-'*70)
     return city, month, day
 
 
@@ -97,7 +97,7 @@ def time_stats(df):
     print('Most popular hour: ',popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*70)
 
 
 def station_stats(df):
@@ -122,7 +122,7 @@ def station_stats(df):
     print('Most popular station combo: ', popular_station_combo)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*70)
 
 
 def trip_duration_stats(df):
@@ -141,7 +141,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*70)
 
 
 def user_stats(df):
@@ -169,9 +169,10 @@ def user_stats(df):
     print('Most common birth year: ', most_common)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*70)
 
 def check_raw_data(df):
+    "Prompts user to view more data. Each input will display 5 additional lines. "
     total_rows = df.count
     check_raw = input("\nWould you like to see raw data? yes or no: ").lower()
     if check_raw == 'yes':
