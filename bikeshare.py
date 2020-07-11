@@ -172,7 +172,7 @@ def user_stats(df):
     print('-'*70)
 
 def check_raw_data(df):
-    "Prompts user to view more data. Each input will display 5 additional lines. "
+    "Prompts user to view more data. Each input will display 5 additional lines. This will continue until user hits no "
     total_rows = df.count
     check_raw = input("\nWould you like to see raw data? yes or no: ").lower()
     if check_raw == 'yes':
